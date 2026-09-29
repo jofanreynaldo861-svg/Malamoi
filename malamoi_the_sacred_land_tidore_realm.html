@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="id" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Bab 1 — Malamoi: The Sacred Land & Tidore Realm</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        moi: {
+                            bg: '#0f1715',
+                            dark: '#14211e',
+                            card: '#1b2d29',
+                            border: '#2c4741',
+                            timber: '#8c5a2b',
+                            timberDark: '#5c3a1b',
+                            gold: '#d4af37',
+                            brass: '#b8860b',
+                            brassLight: '#e5c158',
+                            teal: '#133238',
+                            tealLight: '#225d68',
+                            ocean: '#0ea5e9',
+                            parchment: '#fcf8eb',
+                            parchmentText: '#362212'
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b1210;
+            color: #f0fdf4;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(140, 90, 43, 0.18) 0%, transparent 45%),
+                radial-gradient(circle at 90% 80%, rgba(19, 50, 56, 0.25) 0%, transparent 45%),
+                linear-gradient(180deg, #0b1210 0%, #12211d 100%);
+            background-attachment: fixed;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .font-title { font-family: 'Cinzel', serif; }
+
+        /* Custom Wooden & Tribal Textures */
+        .wood-panel {
+            background: linear-gradient(135deg, rgba(27, 45, 41, 0.95) 0%, rgba(20, 33, 30, 0.98) 100%);
+            border: 1px solid #2c4741;
+            box-shadow: inset 0 1px 0 rgba(212, 175, 55, 0.15);
+        }
+
+        .parchment-box {
+            background-color: #fcf6e8;
+            color: #3b2312;
+            border: 2px solid #b8860b;
+            box-shadow: inset 0 0 15px rgba(140, 90, 43, 0.2);
+        }
+
+        /* SASI Cooldown Pulse Effect */
+        .sasi-active-glow {
+            border-color: #ef4444 !important;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.4) !important;
+            animation: sasiPulse 2s infinite;
+        }
+
+        @keyframes sasiPulse {
+            0% { box-shadow: 0 0 10px rgba(239, 68, 68, 0.3); }
+            50% { box-shadow: 0 0 25px rgba(239, 68, 68, 0.7); }
+            100% { box-shadow: 0 0 10px rgba(239, 68, 68, 0.3); }
+        }
+
+        /* Interactive Tutorial Spotlight */
+        .tutorial-highlight {
+            position: relative;
+            z-index: 45 !important;
+            outline: 4px solid #d4af37 !important;
+            outline-offset: 4px;
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.9) !important;
+            border-radius: 16px;
+            animation: spotlightPulse 1.8s infinite;
+        }
+
+        @keyframes spotlightPulse {
+            0% { outline-color: #d4af37; box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); }
+            50% { outline-color: #fef08a; box-shadow: 0 0 35px rgba(254, 240, 138, 0.95); }
+            100% { outline-color: #d4af37; box-shadow: 0 0 15px rgba(212, 175, 55, 0.6); }
+        }
+
+        /* Speech Bubble Tutorial Cloud */
+        .tutorial-cloud {
+            position: absolute;
+            z-index: 50;
+            background: #fffdf5;
+            color: #3b2312;
+            border: 2px solid #8c5a2b;
+            border-radius: 18px;
+            padding: 16px;
+            box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.3);
+            width: calc(100vw - 32px);
+            max-width: 330px;
+            font-size: 13px;
+            line-height: 1.5;
+            animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0.85); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #14211e; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #2c4741; border-radius: 4px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #d4af37; }
+    </style>
+</head>
+<body class="min-h-full flex flex-col justify-between selection:bg-moi-gold selection:text-black">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="border-b border-moi-border bg-moi-dark/95 backdrop-blur sticky top-0 z-40 px-3 md:px-6 py-2.5 shadow-2xl">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center space-x-2.5">
+                <div class="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-gradient-to-br from-moi-timber to-moi-gold flex items-center justify-center text-slate-950 font-black text-lg md:text-xl shadow-lg border border-moi-brassLight flex-shrink-0">
+                    <i class="fa-solid fa-tree"></i>
+                </div>
+                <div>
+                    <div class="flex items-center space-x-1.5">
+                        <span class="bg-moi-timber/40 text-moi-brassLight text-[9px] md:text-[10px] px-1.5 py-0.5 rounded font-bold uppercase border border-moi-timber/60">Bab 1</span>
+                        <h1 class="font-title text-sm md:text-lg font-bold tracking-wide text-moi-brassLight leading-tight">MALAMOI: THE SACRED LAND</h1>
+                    </div>
+                    <p class="text-[10px] md:text-xs text-emerald-300/80 hidden sm:block">Kosmologi Moi, Hukum Adat SASI & Perdagangan Tidore</p>
+                </div>
+            </div>
+
+            <!-- Action Controls -->
+            <div class="flex items-center space-x-1.5 md:space-x-2 text-xs">
+                <button id="btnHeaderTutorial" onclick="startInteractiveTutorial()" class="bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/60 px-2.5 md:px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 font-bold shadow text-[11px] md:text-xs active:scale-95">
+                    <i class="fa-solid fa-graduation-cap"></i> <span class="hidden xs:inline">Tutorial</span>
+                </button>
+                <button id="btnHeaderLore" onclick="toggleLoreModal()" class="bg-moi-card hover:bg-moi-border text-moi-brassLight border border-moi-border px-2.5 md:px-3 py-1.5 rounded-lg transition flex items-center gap-1.5 font-semibold text-[11px] md:text-xs active:scale-95">
+                    <i class="fa-solid fa-book-bookmark"></i> <span class="hidden sm:inline">Kosmologi Moi</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-3 md:px-6 py-4 md:py-6 flex-grow w-full relative">
+
+        <!-- START SCREEN / INTRO -->
+        <section id="startScreen" class="max-w-3xl mx-auto text-center py-2 md:py-6">
+            <div class="wood-panel rounded-2xl p-5 md:p-8 border border-moi-border shadow-2xl relative overflow-hidden text-left">
+                <div class="flex items-center space-x-3 mb-4">
+                    <span class="p-3 rounded-xl bg-moi-timber/30 text-moi-gold border border-moi-timber/60 text-xl md:text-2xl flex-shrink-0">
+                        <i class="fa-solid fa-[#133238] fa-hands-holding-circle"></i>
+                    </span>
+                    <div>
+                        <h2 class="font-title text-xl md:text-2xl lg:text-3xl font-bold text-white leading-tight">Kepemimpinan Klan Malamoi & Tidore</h2>
+                        <p class="text-[11px] md:text-xs text-moi-gold mt-0.5">Simulasi Kosmologi Adat, Konservasi SASI, dan Barter Kain Timur</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-300 text-xs md:text-sm leading-relaxed mb-5">
+                    Selamat datang, **Tua Adat Klan Moi**! Hutan Malamoi adalah "Ukas" (Ibu) yang memberi kehidupan. Tugas Anda adalah memimpin klan melintasi **5 Musim Kepemimpinan**, menjaga keseimbangan antara **Kemakmuran Klan** (Pangan & Barter) dan **Reputasi Adat** (Penghormatan Alam & Hukum SASI).
+                </p>
+
+                <!-- Information Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-xs">
+                    <div class="bg-moi-dark p-3.5 rounded-xl border border-moi-border space-y-1">
+                        <span class="text-moi-gold font-bold uppercase block text-[11px]"><i class="fa-solid fa-ban-smoke mr-1"></i> Hukum Adat SASI:</span>
+                        <p class="text-gray-400 text-[11px] leading-normal">
+                            Analogi <i>"Cooldown / Lampu Merah Alam"</i>. Saat SASI aktif di Hutan atau Laut, larang eksploitasi untuk memberi waktu ekosistem pulih!
+                        </p>
+                    </div>
+                    <div class="bg-moi-dark p-3.5 rounded-xl border border-moi-border space-y-1">
+                        <span class="text-moi-gold font-bold uppercase block text-[11px]"><i class="fa-solid fa-[#0ea5e9] fa-scroll mr-1"></i> Barter Kain Timur & Tidore:</span>
+                        <p class="text-gray-400 text-[11px] leading-normal">
+                            Tukarkan hasil Sagu & Pala dengan Kain Timur di Dermaga Kora-Kora Tidore untuk menjaga kedaulatan & diplomasi klan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-2.5">
+                    <button onclick="startGame()" class="w-full sm:w-2/3 py-3.5 bg-gradient-to-r from-moi-timber to-moi-gold hover:from-amber-700 hover:to-moi-timber text-slate-950 font-bold font-title text-sm md:text-base rounded-xl shadow-xl transition active:scale-98 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-play"></i> Mulai Kepemimpinan Klan
+                    </button>
+                    <button onclick="startInteractiveTutorial()" class="w-full sm:w-1/3 py-3.5 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/60 font-bold text-xs rounded-xl transition active:scale-98 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-circle-play"></i> Tutorial Interaktif
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN GAME DASHBOARD -->
+        <div id="gameDashboard" class="hidden flex-col gap-4 md:gap-6">
+
+            <!-- HUD / RESOURCE BAR -->
+            <div id="hudStatsBar" class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 md:gap-3">
+                <!-- Food Supply (Sagu & Pala) -->
+                <div class="bg-moi-card border border-moi-border p-3 md:p-3.5 rounded-xl flex items-center space-x-2.5 md:space-x-3 shadow">
+                    <div class="p-2 md:p-2.5 rounded-lg bg-amber-500/20 text-moi-gold text-base md:text-lg flex-shrink-0">
+                        <i class="fa-solid fa-wheat-awn"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <p class="text-[9px] md:text-[10px] uppercase text-gray-400 font-bold truncate">Stok Sagu & Pala</p>
+                        <p id="saguDisplay" class="font-bold text-base md:text-lg text-moi-gold">100 Unit</p>
+                    </div>
+                </div>
+
+                <!-- Kain Timur Count -->
+                <div class="bg-moi-card border border-moi-border p-3 md:p-3.5 rounded-xl flex items-center space-x-2.5 md:space-x-3 shadow">
+                    <div class="p-2 md:p-2.5 rounded-lg bg-teal-500/20 text-teal-300 text-base md:text-lg flex-shrink-0">
+                        <i class="fa-solid fa-rug"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <p class="text-[9px] md:text-[10px] uppercase text-gray-400 font-bold truncate">Kain Timur (Barter)</p>
+                        <p id="kainDisplay" class="font-bold text-base md:text-lg text-teal-300">2 Lembar</p>
+                    </div>
+                </div>
+
+                <!-- Customary Reputation (0 - 100%) -->
+                <div class="bg-moi-card border border-moi-border p-3 md:p-3.5 rounded-xl flex items-center space-x-2.5 md:space-x-3 shadow">
+                    <div class="p-2 md:p-2.5 rounded-lg bg-emerald-500/20 text-emerald-400 text-base md:text-lg flex-shrink-0">
+                        <i class="fa-solid fa-feather-pointed"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <p class="text-[9px] md:text-[10px] uppercase text-gray-400 font-bold truncate">Reputasi Adat</p>
+                        <p id="reputationDisplay" class="font-bold text-base md:text-lg text-emerald-400">85%</p>
+                    </div>
+                </div>
+
+                <!-- Season / Round Counter -->
+                <div class="bg-moi-card border border-moi-border p-3 md:p-3.5 rounded-xl flex items-center space-x-2.5 md:space-x-3 shadow">
+                    <div class="p-2 md:p-2.5 rounded-lg bg-purple-500/20 text-purple-300 text-base md:text-lg flex-shrink-0">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <div class="min-w-0">
+                        <p class="text-[9px] md:text-[10px] uppercase text-gray-400 font-bold truncate">Musim Adat</p>
+                        <p id="seasonDisplay" class="font-bold text-base md:text-lg text-purple-300">Musim 1 / 5</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REGION & SASI STATUS BAR -->
+            <div id="sasiRegionContainer" class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                <!-- Region 1: Hutan Sagu Malamoi -->
+                <div id="cardRegionHutan" class="bg-moi-card border border-moi-border rounded-xl p-3.5 flex items-center justify-between shadow transition">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2.5 rounded-lg bg-emerald-950 text-emerald-400 border border-emerald-800 text-lg">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-title text-xs md:text-sm font-bold text-white">Hutan Sagu Ukas</h4>
+                            <p class="text-[10px] text-gray-400">Wilayah Ulayat Malamoi</p>
+                        </div>
+                    </div>
+                    <span id="badgeSasiHutan" class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
+                        SASI BUKA (Boleh Panen)
+                    </span>
+                </div>
+
+                <!-- Region 2: Pesisir & Laut SASI -->
+                <div id="cardRegionLaut" class="bg-moi-card border border-moi-border rounded-xl p-3.5 flex items-center justify-between shadow transition">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2.5 rounded-lg bg-sky-950 text-sky-400 border border-sky-800 text-lg">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-title text-xs md:text-sm font-bold text-white">Pesisir & Teluk Adat</h4>
+                            <p class="text-[10px] text-gray-400">Konservasi Teripang & Ikan</p>
+                        </div>
+                    </div>
+                    <span id="badgeSasiLaut" class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/40 sasi-active-glow">
+                        SASI TUTUP (Lampu Merah)
+                    </span>
+                </div>
+
+                <!-- Region 3: Dermaga Barter Tidore -->
+                <div id="cardRegionTidore" class="bg-moi-card border border-moi-border rounded-xl p-3.5 flex items-center justify-between shadow transition">
+                    <div class="flex items-center space-x-3">
+                        <div class="p-2.5 rounded-lg bg-amber-950 text-amber-400 border border-amber-800 text-lg">
+                            <i class="fa-solid fa-ship"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-title text-xs md:text-sm font-bold text-white">Dermaga Tidore</h4>
+                            <p class="text-[10px] text-gray-400">Jejaring Kora-Kora & Biak</p>
+                        </div>
+                    </div>
+                    <button onclick="openBarterModal()" class="text-[10px] font-bold px-2.5 py-1 rounded-lg bg-moi-gold hover:bg-yellow-500 text-slate-950 transition shadow active:scale-95">
+                        <i class="fa-solid fa-right-left mr-1"></i> Pasar Barter
+                    </button>
+                </div>
+            </div>
+
+            <!-- MAIN DILEMMA PANEL (4 CHOICES) -->
+            <div id="dilemmaContainer" class="bg-moi-card border border-moi-border rounded-2xl p-4 md:p-6 shadow-2xl relative overflow-hidden">
+                <div class="flex items-center justify-between mb-3 border-b border-moi-border pb-3">
+                    <div class="flex items-center space-x-2.5">
+                        <span class="p-2 rounded-lg bg-moi-timber/30 text-moi-gold border border-moi-timber/60 text-base md:text-lg">
+                            <i class="fa-solid fa-gavel"></i>
+                        </span>
+                        <div>
+                            <span id="dilemmaSeasonTag" class="text-[9px] md:text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-moi-timber/40 text-moi-brassLight">Dilema Adat Musim 1</span>
+                            <h3 id="dilemmaTitle" class="font-title text-base md:text-lg font-bold text-white">Ancaman Kelangkaan Pangan & Larangan SASI</h3>
+                        </div>
+                    </div>
+                    <span id="analogiaBadge" class="hidden md:inline-block text-[11px] bg-sky-950 text-sky-300 border border-sky-800 px-2.5 py-1 rounded-lg font-medium">
+                        <i class="fa-solid fa-circle-info mr-1"></i> Analogi: SASI = Cooldown Alam
+                    </span>
+                </div>
+
+                <!-- Dilemma Scenario Prompt -->
+                <p id="dilemmaScenarioText" class="text-xs md:text-sm text-gray-200 bg-moi-dark p-3.5 md:p-4 rounded-xl border border-moi-border leading-relaxed mb-4">
+                    Pace dan klan mengalami kekurangan stok sagu karena musim kering. Namun, Sasi Hutan baru saja dipasang oleh Tetua Adat minggu lalu. Beberapa pemuda klan mendesak untuk menebang pohon sagu muda di wilayah SASI. Apakah keputusan Anda sebagai Tua Adat?
+                </p>
+
+                <!-- 4 Choices Container -->
+                <div id="dilemmaChoicesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                    <!-- Choices injected dynamically via JS -->
+                </div>
+
+                <!-- Educational Bite-Sized Feedback Box -->
+                <div id="dilemmaFeedbackBox" class="hidden parchment-box p-3.5 md:p-4 rounded-xl text-xs space-y-1.5 leading-relaxed">
+                    <h5 class="font-bold text-amber-950 flex items-center gap-1.5 text-xs md:text-sm">
+                        <i class="fa-solid fa-scroll"></i> Nilai Edukasi Kosmologi & Adat:
+                    </h5>
+                    <p id="dilemmaFeedbackText" class="text-amber-900 font-medium text-[11px] md:text-xs">
+                        Umpan balik edukatif akan muncul di sini...
+                    </p>
+                    <button onclick="nextSeasonRound()" class="mt-2 w-full py-2.5 bg-moi-timber hover:bg-amber-800 text-white font-bold text-xs rounded-lg transition shadow active:scale-98 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-forward"></i> Lanjutkan ke Musim Berikutnya
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MODAL PASAR BARTER TIDORE -->
+        <div id="barterModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4 hidden">
+            <div class="bg-moi-card max-w-lg w-full rounded-2xl p-4 sm:p-6 border-2 border-moi-gold shadow-2xl relative">
+                <button onclick="closeBarterModal()" class="absolute top-3.5 right-3.5 text-gray-400 hover:text-white text-lg p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <div class="flex items-center space-x-3 mb-4">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-moi-gold text-moi-gold flex items-center justify-center text-xl font-bold flex-shrink-0">
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-title text-base md:text-lg text-white font-bold">Pasar Barter Dermaga Tidore</h4>
+                        <p class="text-[11px] text-gray-400">Pertukaran Hasil Alam Moi dengan Kain Timur Pedagang Biak-Tidore</p>
+                    </div>
+                </div>
+
+                <div class="bg-moi-dark p-3.5 rounded-xl border border-moi-border space-y-2 mb-4 text-xs">
+                    <div class="flex justify-between items-center border-b border-moi-border pb-2">
+                        <span class="text-gray-300">Stok Sagu & Pala Anda:</span>
+                        <span id="barterSaguCurrent" class="font-bold text-moi-gold">100 Unit</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-moi-border pb-2">
+                        <span class="text-gray-300">Stok Kain Timur Anda:</span>
+                        <span id="barterKainCurrent" class="font-bold text-teal-300">2 Lembar</span>
+                    </div>
+                    <div class="flex justify-between items-center text-emerald-400 font-semibold">
+                        <span>Nilai Tukar Adat:</span>
+                        <span>40 Sagu/Pala = 1 Kain Timur</span>
+                    </div>
+                </div>
+
+                <p class="text-[11px] text-gray-300 mb-4 leading-relaxed">
+                    Kain Timur adalah simbol kedaulatan, mas kawin, dan penyelesaian denda adat dalam kosmologi Papua. Memiliki Kain Timur meningkatkan posisi tawar klan di kawasan Teluk Berau & Tidore.
+                </p>
+
+                <div class="flex gap-2">
+                    <button onclick="executeBarter()" class="w-full py-3 bg-moi-gold hover:bg-yellow-500 text-slate-950 font-bold text-xs md:text-sm rounded-xl transition shadow active:scale-98 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-right-left"></i> Tukar 40 Sagu dengan 1 Kain Timur
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- END GAME / REFLECTION SUMMARY SCREEN -->
+        <section id="endScreen" class="hidden max-w-3xl mx-auto py-2 md:py-6">
+            <div class="wood-panel rounded-2xl p-5 md:p-8 border-2 border-moi-gold shadow-2xl relative">
+                
+                <div class="text-center mb-5 md:mb-6">
+                    <div id="endBadgeIcon" class="w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-moi-gold/20 text-moi-gold border border-moi-gold flex items-center justify-center mx-auto text-2xl md:text-3xl mb-2.5 shadow-lg">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h2 class="font-title text-xl md:text-2xl font-bold text-white">Laporan Hasil Kepemimpinan Klan Malamoi</h2>
+                    <p id="endTitleGrade" class="text-xs md:text-sm text-moi-gold font-bold mt-1">Gelar Adat: Tua Adat Penjaga Hutan Ukas & Kerajaan Tidore</p>
+                </div>
+
+                <!-- Final Stats Breakdown -->
+                <div class="grid grid-cols-3 gap-2 md:gap-3 mb-5">
+                    <div class="bg-moi-dark p-3 md:p-4 rounded-xl border border-moi-border text-center">
+                        <span class="text-[9px] md:text-[11px] text-gray-400 font-bold block truncate">Pangan Akhir</span>
+                        <p id="finalSagu" class="text-lg md:text-2xl font-bold text-moi-gold">100</p>
+                    </div>
+                    <div class="bg-moi-dark p-3 md:p-4 rounded-xl border border-moi-border text-center">
+                        <span class="text-[9px] md:text-[11px] text-gray-400 font-bold block truncate">Kain Timur</span>
+                        <p id="finalKain" class="text-lg md:text-2xl font-bold text-teal-300">2 Lembar</p>
+                    </div>
+                    <div class="bg-moi-dark p-3 md:p-4 rounded-xl border border-moi-border text-center">
+                        <span class="text-[9px] md:text-[11px] text-moi-gold font-bold block truncate">Reputasi Adat</span>
+                        <p id="finalReputation" class="text-lg md:text-2xl font-bold text-emerald-400">85%</p>
+                    </div>
+                </div>
+
+                <!-- Summary Explanation -->
+                <div class="bg-moi-dark p-3.5 md:p-4 rounded-xl border border-moi-border mb-5 text-xs leading-relaxed space-y-1.5">
+                    <h4 class="font-bold text-moi-brassLight uppercase text-[11px] md:text-xs flex items-center gap-2">
+                        <i class="fa-solid fa-scroll"></i> Evaluasi Nilai Adat & Kosmologi Bab 1:
+                    </h4>
+                    <p id="endSummaryText" class="text-gray-300 text-[11px] md:text-xs">
+                        Kepemimpinan Anda telah berhasil menjaga keharmonisan antara eksploitasi alam dan hukum konservasi SASI. Nilai kosmologi Suku Moi meyakini bahwa manusia bukan pemilik hutan, melainkan penjaga kelestarian warisan leluhur.
+                    </p>
+                </div>
+
+                <!-- REFLEKSI TERBUKA SISWA -->
+                <div class="bg-moi-dark/90 p-4 md:p-5 rounded-xl border border-moi-timber/60 mb-5 space-y-2.5">
+                    <label class="block text-xs font-bold text-moi-gold uppercase">
+                        <i class="fa-solid fa-pen-nib mr-1"></i> Refleksi Terbuka Siswa (Tugas Modul Bab 1):
+                    </label>
+                    <p class="text-xs text-gray-300 leading-relaxed">
+                        <i>"Mengapa tradisi SASI di Papua dan jejaring barter Kain Timur dengan Tidore dapat dikategorikan sebagai sistem konservasi lingkungan dan kedaulatan ekonomi lokal yang sangat maju sejak masa pra-kolonial?"</i>
+                    </p>
+                    <textarea id="reflectionEssayInput" rows="4" class="w-full bg-moi-card border border-moi-border rounded-xl p-3 text-xs text-white placeholder-gray-500 focus:outline-none focus:border-moi-gold custom-scrollbar" placeholder="Tuliskan analisis & refleksi kritis Anda di sini (Minimal 3 kalimat)..."></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-center gap-2.5">
+                    <button onclick="copyReflectionReport()" class="w-full sm:w-1/2 py-3 bg-moi-card hover:bg-moi-border text-moi-gold border border-moi-gold/50 font-bold text-xs rounded-xl transition active:scale-98 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-copy"></i> Salin Laporan & Refleksi
+                    </button>
+                    <button onclick="resetGame()" class="w-full sm:w-1/2 py-3 bg-gradient-to-r from-moi-timber to-moi-gold text-slate-950 font-bold font-title text-xs rounded-xl transition shadow active:scale-98 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-rotate-right"></i> Ulangi Simulasi
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ENSIKLOPEDI KOSMOLOGI MOI & TIDORE MODAL -->
+    <div id="loreModal" class="fixed inset-0 bg-black/85 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-moi-card max-w-2xl w-full rounded-2xl p-5 md:p-6 border border-moi-gold/40 shadow-2xl relative max-h-[85vh] flex flex-col">
+            <div class="flex items-center justify-between pb-3 border-b border-moi-border mb-3.5">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-book-bookmark text-moi-gold text-lg md:text-xl"></i>
+                    <h4 class="font-title text-base md:text-lg text-white font-bold">Kosmologi Malamoi & Tidore Realm</h4>
+                </div>
+                <button onclick="toggleLoreModal()" class="text-gray-400 hover:text-white text-lg p-1">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="overflow-y-auto custom-scrollbar space-y-3.5 pr-2 text-xs leading-relaxed text-gray-300 flex-grow">
+                <div class="bg-moi-dark p-3.5 rounded-xl border border-moi-border space-y-1">
+                    <h5 class="font-bold text-moi-gold text-xs md:text-sm"><i class="fa-solid fa-tree mr-1"></i> Kosmologi Suku Moi: Hutan adalah Ibu (Ukas)</h5>
+                    <p>
+                        Bagi Suku Moi di wilayah Sorong & Malamoi, hutan (*Ukas*) dianggap sebagai sosok ibu yang memberikan air ketuban (sungai), ASI (sagu), dan perlindungan. Kerusakan hutan berarti melukai ibu sendiri.
+                    </p>
+                </div>
+
+                <div class="bg-moi-dark p-3.5 rounded-xl border border-moi-border space-y-1">
+                    <h5 class="font-bold text-red-400 text-xs md:text-sm"><i class="fa-solid fa-ban mr-1"></i> Hukum Adat SASI (Lampu Merah Alam)</h5>
+                    <p>
+                        SASI adalah hukum adat larangan mengambil hasil alam tertentu (sagu, teripang, ikan) dalam kurun waktu tertentu. SASI bertindak seperti *Cooldown/Lampu Merah* yang memberi kesempatan alam beregenerasi. Pelanggar SASI dikenakan sanksi adat berupa denda Kain Timur atau dikucilkan.
+                    </p>
+                </div>
+
+                <div class="bg-moi-dark p-3.5 rounded-xl border border-moi-border space-y-1">
+                    <h5 class="font-bold text-teal-300 text-xs md:text-sm"><i class="fa-solid fa-ship mr-1"></i> Jejaring Dagang Tidore, Biak & Kain Timur</h5>
+                    <p>
+                        Sejak abad ke-15, wilayah pesisir Papua terhubung dengan Kesultanan Tidore melalui perahu Kora-Kora dan pedagang Biak. Hasil bumi seperti Pala, Teripang, dan Burung Cendrawasih dibarter dengan Kain Timur (kain tenun asal Maluku/Nusa Tenggara) yang bernilai amat tinggi di masyarakat adat Papua.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pt-3 border-t border-moi-border text-center mt-2">
+                <button onclick="toggleLoreModal()" class="px-6 py-2 bg-moi-gold hover:bg-yellow-500 text-slate-950 font-bold text-xs rounded-xl transition">
+                    Tutup Modul Ensiklopedia
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- INTERACTIVE STEP-BY-STEP TUTORIAL OVERLAY & CLOUD BUBBLE -->
+    <div id="tutorialOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-[2px] z-40 hidden pointer-events-auto"></div>
+    <div id="tutorialCloudBubble" class="tutorial-cloud hidden">
+        <div class="flex items-center justify-between mb-2">
+            <span id="tutorialStepBadge" class="bg-amber-800 text-amber-100 font-bold text-[10px] uppercase px-2 py-0.5 rounded">Langkah 1 dari 5</span>
+            <button onclick="stopInteractiveTutorial()" class="text-amber-900 hover:text-red-700 text-sm font-bold p-1">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <h5 id="tutorialTitle" class="font-bold text-amber-950 text-xs md:text-sm mb-1">Indikator Keseimbangan Klan</h5>
+        <p id="tutorialText" class="text-amber-900 text-xs mb-3">
+            Di panel atas ini, kamu dapat memantau Stok Sagu (Pangan), Kain Timur (Kedaulatan Barter), Reputasi Adat (0-100%), dan Musim Adat saat ini.
+        </p>
+        <div class="flex items-center justify-between pt-2 border-t border-amber-300/80">
+            <button id="btnPrevTutorial" onclick="prevTutorialStep()" class="px-2.5 py-1 bg-amber-200 hover:bg-amber-300 text-amber-950 font-bold text-[11px] rounded-lg transition disabled:opacity-40">
+                &lt; Sblm
+            </button>
+            <button id="btnNextTutorial" onclick="nextTutorialStep()" class="px-3 py-1 bg-amber-600 hover:bg-amber-700 text-white font-bold text-[11px] rounded-lg transition shadow">
+                Lanjut &gt;
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-moi-border bg-moi-bg py-2.5 px-4 text-center text-[10px] md:text-[11px] text-emerald-400/60">
+        <p>Aktivitas Evaluasi Interaktif Buku Bab 1 • Malamoi: The Sacred Land & Tidore Realm</p>
+    </footer>
+
+    <script>
+        let gameState = {
+            sagu: 100,
+            kainTimur: 2,
+            reputation: 85,
+            season: 1,
+            maxSeasons: 5,
+            sasiHutan: false, // false = BUKA, true = TUTUP
+            sasiLaut: true,   // true = TUTUP
+            dilemmas: [
+                {
+                    season: 1,
+                    title: "Musim 1: Kelangkaan Sagu saat SASI Hutan Aktif",
+                    scenario: "Musim kering melanda desa. Stok pangan menipis, namun wilayah Hutan Sagu Utama sedang berada dalam hukum SASI TUTUP (Cooldown Restorasi Alam) yang dipasang bulan lalu. Beberapa pemuda klan meminta izin menebang sagu muda. Bagaimana keputusan Anda?",
+                    choices: [
+                        {
+                            label: "A. Pertahankan Hukum SASI Hutan, alihkan pencarian ke sagu rawa liar & teripang pesisir.",
+                            saguChange: +10,
+                            kainChange: 0,
+                            repChange: +10,
+                            feedback: "Keputusan Sangat Bijak! Menjaga hukum SASI memperkuat kepercayaan klan pada leluhur dan memberi waktu hutan sagu tumbuh matang (Prinsip Konservasi Alam Moi)."
+                        },
+                        {
+                            label: "B. Izinkan menebang sagu secukupnya saja di batas wilayah SASI.",
+                            saguChange: +25,
+                            kainChange: 0,
+                            repChange: -10,
+                            feedback: "Pangan bertambah, namun melanggar batas SASI melukai wibawa Adat dan merusak regenerasi pohon sagu muda sebelum waktunya."
+                        },
+                        {
+                            label: "C. Buka seluruh wilayah SASI Hutan untuk dipanen massal.",
+                            saguChange: +50,
+                            kainChange: 0,
+                            repChange: -30,
+                            feedback: "Eksploitasi berlebihan! Pangan melimpah sesaat, namun persediaan sagu tahun depan hancur dan Reputasi Adat Anda merosot drastis."
+                        },
+                        {
+                            label: "D. Gunakan 1 Lembar Kain Timur untuk membakar ritual pemanggilan hujan.",
+                            saguChange: 0,
+                            kainChange: -1,
+                            repChange: +5,
+                            feedback: "Ritual dihormati, namun kehilangan 1 Kain Timur tanpa memperoleh kepastian pangan tambahan."
+                        }
+                    ]
+                },
+                {
+                    season: 2,
+                    title: "Musim 2: Kedatangan Utusan Pedagang Tidore & Biak",
+                    scenario: "Perahu Kora-Kora dari Kesultanan Tidore berlabuh di dermaga. Mereka menawarkan 2 Lembar Kain Timur bernilai tinggi, tetapi meminta 60 Unit Sagu & Pala hasil panen terbaik klan Anda. Apakah tindakan Anda?",
+                    choices: [
+                        {
+                            label: "A. Terima barter sesuai kesepakatan adat (Tukar 60 Sagu demi 2 Kain Timur).",
+                            saguChange: -60,
+                            kainChange: +2,
+                            repChange: +10,
+                            feedback: "Jejaring diplomasi Tidore menguat! Memiliki Kain Timur memperkokoh posisi tawar dan kehormatan adat klan Anda di kawasan Teluk Berau."
+                        },
+                        {
+                            label: "B. Nego barter lebih murah (Tukar 30 Sagu saja untuk 1 Kain Timur).",
+                            saguChange: -30,
+                            kainChange: +1,
+                            repChange: +5,
+                            feedback: "Tawar-menawar berhasil secara moderat, menjaga stok pangan klan sekaligus menambah simbol status adat."
+                        },
+                        {
+                            label: "C. Tolak kedatangan pedagang dan simpan seluruh pangan untuk klan sendiri.",
+                            saguChange: 0,
+                            kainChange: 0,
+                            repChange: -10,
+                            feedback: "Klan merasa aman pangan, namun pedagang Tidore kecewa dan menganggap klan Anda mengisolasi diri dari jaringan dagang regional."
+                        },
+                        {
+                            label: "D. Jamu utusan Tidore dengan pesta Sagu tanpa meminta Kain Timur.",
+                            saguChange: -20,
+                            kainChange: 0,
+                            repChange: +15,
+                            feedback: "Kemurahan hati luar biasa! Reputasi Adat melonjak tinggi karena klan Anda dikenal sangat ramah memuliakan tamu."
+                        }
+                    ]
+                },
+                {
+                    season: 3,
+                    title: "Musim 3: Perselisihan Batas Ulayat Hutan antar Klan",
+                    scenario: "Klan tetangga terbukti merusak cerucuk SASI dan memanen Pala liar di dalam hutan ulayat klan Malamoi. Tetua muda menuntut perang atau denda adat yang berat. Bagaimana Anda mengendalikan situasi?",
+                    choices: [
+                        {
+                            label: "A. Selesaikan via Musyawarah Adat di Perahu Kora-Kora dan tuntut denda 1 Kain Timur.",
+                            saguChange: +10,
+                            kainChange: +1,
+                            repChange: +15,
+                            feedback: "Penyelesaian Damai Sempurna! Hukum adat ditegakkan tanpa pertumpahan darah, klan Anda memperoleh denda Kain Timur secara terhormat."
+                        },
+                        {
+                            label: "B. Ampuni kesalahan mereka tanpa denda demi menjaga persaudaraan.",
+                            saguChange: 0,
+                            kainChange: 0,
+                            repChange: -5,
+                            feedback: "Niat baik, tetapi dianggap lemah oleh klan lain sehingga hukum batas ulayat kurang dihormati."
+                        },
+                        {
+                            label: "C. Kirim pasukan klan untuk merebut seluruh persediaan pangan klan tetangga.",
+                            saguChange: +40,
+                            kainChange: 0,
+                            repChange: -35,
+                            feedback: "Konflik berdarah pecah! Pangan bertambah tetapi perang saudara merusak keharmonisan kosmologi Malamoi."
+                        },
+                        {
+                            label: "D. Laporkan ke Syahbandar Tidore agar diputus oleh Sultan.",
+                            saguChange: 0,
+                            kainChange: 0,
+                            repChange: +5,
+                            feedback: "Yurisdiksi Tidore diakui, namun penyelesaian membutuhkan waktu lama."
+                        }
+                    ]
+                },
+                {
+                    season: 4,
+                    title: "Musim 4: Penawaran Eksploitasi Laut oleh Pedagang Asing",
+                    scenario: "Pedagang asing menawarkan barang besi modern jika Anda membiarkan mereka memanen Teripang dan Mutiara di Teluk Pesisir saat SASI Laut sedang Tutup. Apa respon Anda?",
+                    choices: [
+                        {
+                            label: "A. Tolak tegas! Pertahankan SASI Laut sampai waktu 'Sasi Buka' resmi.",
+                            saguChange: 0,
+                            kainChange: 0,
+                            repChange: +20,
+                            feedback: "Konservasi Terjaga! Dedaunan SASI di pesisir melambangkan janji dengan alam agar teripang & ekosistem laut berkembang biak pesat."
+                        },
+                        {
+                            label: "B. Izinkan mereka memanen di pinggir teluk saja.",
+                            saguChange: +20,
+                            kainChange: 0,
+                            repChange: -20,
+                            feedback: "Eksploitasi teripang muda merusak rantai makanan pesisir dan memicu protes dari nelayan adat."
+                        },
+                        {
+                            label: "C. Buka total SASI Laut dan minta imbalan 3 Kain Timur.",
+                            saguChange: 0,
+                            kainChange: +3,
+                            repChange: -40,
+                            feedback: "Pelanggaran Adat Berat! Kekayaan Kain Timur meningkat, tetapi Laut mengalami overfishing hebat dan Reputasi Adat hancur."
+                        },
+                        {
+                            label: "D. Ajak pedagang berpartisipasi dalam Upacara Buka SASI bulan depan.",
+                            saguChange: +15,
+                            kainChange: +1,
+                            repChange: +10,
+                            feedback: "Strategi Edukatif Cerdas! Mengenalkan tradisi SASI kepada pihak luar sembari menjaga etika perdagangan."
+                        }
+                    ]
+                },
+                {
+                    season: 5,
+                    title: "Musim 5: Upacara Pesta Adat & Pembukaan SASI (Sasi Buka)",
+                    scenario: "Saatnya tiba untuk menggelar ritual 'Sasi Buka' (Pembukaan Pemanenan Alam setelah Masa Restorasi). Seluruh anggota klan dan kerajaan sahabat hadir. Bagaimana Anda memimpin puncak pesta kepemimpinan ini?",
+                    choices: [
+                        {
+                            label: "A. Bagikan pangan sagu secara adil & pajang Kain Timur sebagai simbol persatuan klan.",
+                            saguChange: -20,
+                            kainChange: 0,
+                            repChange: +25,
+                            feedback: "Puncak Kepemimpinan Agung! Seluruh klan menikmati keberlanjutan hasil alam yang melimpah berkat kedisiplinan menjaga SASI."
+                        },
+                        {
+                            label: "B. Obral panen massal tanpa batas di seluruh hutan dan pesisir.",
+                            saguChange: +60,
+                            kainChange: 0,
+                            repChange: -15,
+                            feedback: "Pesta meriah, tetapi tanpa aturan kuota panen yang jelas, ekosistem kembali terancam rusak."
+                        },
+                        {
+                            label: "C. Serahkan seluruh Kain Timur klan kepada Utusan Tidore.",
+                            saguChange: 0,
+                            kainChange: -2,
+                            repChange: -10,
+                            feedback: "Diplomasi berlebihan yang mengorbankan cadangan mas kawin & simbol kedaulatan klan sendiri."
+                        },
+                        {
+                            label: "D. Tetapkan aturan SASI Baru untuk 5 tahun ke depan bagi generasi muda.",
+                            saguChange: 0,
+                            kainChange: 0,
+                            repChange: +20,
+                            feedback: "Kepemimpinan Visioner! Warisan tradisi konservasi diteruskan secara berkelanjutan kepada generasi berikutnya."
+                        }
+                    ]
+                }
+            ]
+        };
+
+        let currentTutorialStep = 0;
+        const tutorialSteps = [
+            {
+                elementId: 'hudStatsBar',
+                title: '1. Indikator Keseimbangan Klan',
+                text: 'Di sini kamu memantau Pangan (Sagu/Pala), Kain Timur (Simbol Barter & Adat), Reputasi Adat (0-100%), dan Musim Kepemimpinan.'
+            },
+            {
+                elementId: 'sasiRegionContainer',
+                title: '2. Peta Wilayah & Status Hukum SASI',
+                text: 'SASI adalah analogi "Cooldown / Lampu Merah Alam". Jika SASI TUTUP, wilayah tersebut melarang pemanenan agar flora/fauna sempat beregenerasi.'
+            },
+            {
+                elementId: 'dilemmaContainer',
+                title: '3. Dilema Adat 4 Pilihan Aksi',
+                text: 'Di setiap musim, kamu akan menghadapi dilema sosial-ekonomi. Pilih 1 dari 4 tindakan (A, B, C, D) yang memiliki analisis dampak (trade-offs).'
+            },
+            {
+                elementId: 'cardRegionTidore',
+                title: '4. Pasar Barter Dermaga Tidore',
+                text: 'Kamu dapat menukarkan hasil bumi Sagu/Pala dengan Kain Timur dari pedagang Tidore & Biak untuk memperkuat status klan.'
+            },
+            {
+                elementId: 'btnHeaderLore',
+                title: '5. Modul Ensiklopedia & Refleksi',
+                text: 'Buka modul Kosmologi Moi kapan saja untuk membaca latar sejarah, dan selesaikan 5 musim untuk menyusun Laporan Refleksi Siswa.'
+            }
+        ];
+
+        function startGame() {
+            document.getElementById('startScreen').classList.add('hidden');
+            document.getElementById('endScreen').classList.add('hidden');
+            document.getElementById('gameDashboard').classList.remove('hidden');
+            document.getElementById('gameDashboard').classList.add('flex');
+
+            gameState.season = 1;
+            gameState.sagu = 100;
+            gameState.kainTimur = 2;
+            gameState.reputation = 85;
+
+            updateHUD();
+            loadDilemmaRound(1);
+        }
+
+        function updateHUD() {
+            document.getElementById('saguDisplay').innerText = `${gameState.sagu} Unit`;
+            document.getElementById('kainDisplay').innerText = `${gameState.kainTimur} Lembar`;
+            document.getElementById('reputationDisplay').innerText = `${gameState.reputation}%`;
+            document.getElementById('seasonDisplay').innerText = `Musim ${gameState.season} / ${gameState.maxSeasons}`;
+
+            // Cap reputation at 100% and min 0%
+            if (gameState.reputation > 100) gameState.reputation = 100;
+            if (gameState.reputation < 0) gameState.reputation = 0;
+        }
+
+        function loadDilemmaRound(seasonNum) {
+            const dilemma = gameState.dilemmas.find(d => d.season === seasonNum);
+            if (!dilemma) {
+                finishMalamoiGame();
+                return;
+            }
+
+            document.getElementById('dilemmaSeasonTag').innerText = `Dilema Adat Musim ${seasonNum} dari 5`;
+            document.getElementById('dilemmaTitle').innerText = dilemma.title;
+            document.getElementById('dilemmaScenarioText').innerText = dilemma.scenario;
+
+            const grid = document.getElementById('dilemmaChoicesGrid');
+            grid.innerHTML = '';
+
+            dilemma.choices.forEach((choice, idx) => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-3.5 rounded-xl border border-moi-border bg-moi-dark hover:border-moi-gold hover:bg-moi-card transition text-xs text-gray-200 flex items-start space-x-2.5 choice-btn cursor-pointer active:scale-98 shadow";
+                btn.onclick = () => selectDilemmaChoice(choice, btn);
+                btn.innerHTML = `
+                    <span class="w-6 h-6 rounded-lg bg-moi-timber/40 text-moi-gold border border-moi-timber flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">${String.fromCharCode(65 + idx)}</span>
+                    <span class="leading-relaxed text-[11px] md:text-xs text-gray-200">${choice.label}</span>
+                `;
+                grid.appendChild(btn);
+            });
+
+            document.getElementById('dilemmaFeedbackBox').classList.add('hidden');
+        }
+
+        function selectDilemmaChoice(choice, btnElem) {
+            document.querySelectorAll('.choice-btn').forEach(b => {
+                b.disabled = true;
+                b.classList.add('opacity-50', 'cursor-not-allowed');
+            });
+
+            btnElem.classList.remove('opacity-50');
+            btnElem.classList.add('border-moi-gold', 'bg-moi-timber/30', 'ring-2', 'ring-moi-gold');
+
+            // Apply state changes
+            gameState.sagu += choice.saguChange;
+            gameState.kainTimur += choice.kainChange;
+            gameState.reputation += choice.repChange;
+
+            if (gameState.sagu < 0) gameState.sagu = 0;
+            if (gameState.kainTimur < 0) gameState.kainTimur = 0;
+
+            updateHUD();
+
+            // Display Feedback Box
+            const feedbackBox = document.getElementById('dilemmaFeedbackBox');
+            const feedbackText = document.getElementById('dilemmaFeedbackText');
+
+            feedbackText.innerHTML = `${choice.feedback} <br><br><b>Dampak Terhadap Klan:</b> Sagu (${choice.saguChange >= 0 ? '+' : ''}${choice.saguChange}), Kain Timur (${choice.kainChange >= 0 ? '+' : ''}${choice.kainChange}), Reputasi Adat (${choice.repChange >= 0 ? '+' : ''}${choice.repChange}%).`;
+            
+            feedbackBox.classList.remove('hidden');
+            feedbackBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function nextSeasonRound() {
+            gameState.season += 1;
+            if (gameState.season > gameState.maxSeasons) {
+                finishMalamoiGame();
+            } else {
+                updateHUD();
+                loadDilemmaRound(gameState.season);
+            }
+        }
+
+        function finishMalamoiGame() {
+            document.getElementById('gameDashboard').classList.add('hidden');
+            document.getElementById('endScreen').classList.remove('hidden');
+
+            document.getElementById('finalSagu').innerText = `${gameState.sagu} Unit`;
+            document.getElementById('finalKain').innerText = `${gameState.kainTimur} Lembar`;
+            document.getElementById('finalReputation').innerText = `${gameState.reputation}%`;
+
+            const titleElem = document.getElementById('endTitleGrade');
+            const summaryElem = document.getElementById('endSummaryText');
+
+            if (gameState.reputation >= 80) {
+                titleElem.innerText = "Gelar Adat: Tua Adat Penjaga Kosmologi Malamoi & Tidore Realm (Sangat Agung)";
+                summaryElem.innerText = "Luar biasa! Kepemimpinan Anda menjadi teladan sempurna. Anda berhasil mengalirkan keberlanjutan pangan tanpa sedikit pun melanggar kesucian SASI Hutan & Laut. Klan Anda dihormati oleh Sultan Tidore dan pedagang pesisir.";
+            } else if (gameState.reputation >= 50) {
+                titleElem.innerText = "Gelar Adat: Pemimpin Klan Pembawa Keseimbangan";
+                summaryElem.innerText = "Kepemimpinan yang stabil. Anda beberapa kali melakukan kompromi kebutuhan klan dengan tradisi adat SASI, namun secara umum keharmonisan alam Malamoi tetap terjaga.";
+            } else {
+                titleElem.innerText = "Gelar Adat: Pemimpin Terdesak Eksploitasi";
+                summaryElem.innerText = "Peringatan Adat! Keputusan Anda terlalu banyak mengeksploitasi hutan dan melanggar larangan SASI. Meskipun pangan berlimpah sesaat, regenerasi alam terganggu dan Reputasi Adat klan menurun.";
+            }
+        }
+
+        function openBarterModal() {
+            document.getElementById('barterSaguCurrent').innerText = `${gameState.sagu} Unit`;
+            document.getElementById('barterKainCurrent').innerText = `${gameState.kainTimur} Lembar`;
+            document.getElementById('barterModal').classList.remove('hidden');
+        }
+
+        function closeBarterModal() {
+            document.getElementById('barterModal').classList.add('hidden');
+        }
+
+        function executeBarter() {
+            if (gameState.sagu < 40) {
+                showToast("Stok Sagu & Pala tidak cukup! Butuh minimal 40 Unit.");
+                return;
+            }
+
+            gameState.sagu -= 40;
+            gameState.kainTimur += 1;
+            gameState.reputation += 5;
+
+            updateHUD();
+            openBarterModal();
+            showToast("Barter Berhasil! +1 Kain Timur, +5% Reputasi Adat.");
+        }
+
+        function copyReflectionReport() {
+            const essayText = document.getElementById('reflectionEssayInput').value || "(Belum diisi)";
+            const report = `=== LAPORAN EVALUASI BAB 1: MALAMOI THE SACRED LAND ===
+Hasil Pangan Akhir (Sagu & Pala): ${gameState.sagu} Unit
+Koleksi Kain Timur: ${gameState.kainTimur} Lembar
+Reputasi Adat Klan: ${gameState.reputation}%
+Gelar Kepemimpinan: ${document.getElementById('endTitleGrade').innerText}
+
+--- REFLEKSI SISWA ---
+${essayText}
+======================================================`;
+
+            const tempInput = document.createElement('textarea');
+            tempInput.value = report;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            showToast("Laporan & Refleksi Bab 1 berhasil disalin!");
+        }
+
+        function resetGame() {
+            document.getElementById('endScreen').classList.add('hidden');
+            startGame();
+        }
+
+        function startInteractiveTutorial() {
+            if (document.getElementById('gameDashboard').classList.contains('hidden')) {
+                startGame();
+            }
+            currentTutorialStep = 0;
+            showTutorialStep(0);
+        }
+
+        function showTutorialStep(stepIndex) {
+            clearTutorialHighlights();
+
+            if (stepIndex < 0 || stepIndex >= tutorialSteps.length) {
+                stopInteractiveTutorial();
+                return;
+            }
+
+            currentTutorialStep = stepIndex;
+            const step = tutorialSteps[stepIndex];
+            const targetElem = document.getElementById(step.elementId);
+
+            if (!targetElem) return;
+
+            document.getElementById('tutorialOverlay').classList.remove('hidden');
+            
+            targetElem.classList.add('tutorial-highlight');
+            targetElem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+            const cloud = document.getElementById('tutorialCloudBubble');
+            cloud.classList.remove('hidden');
+
+            document.getElementById('tutorialStepBadge').innerText = `Langkah ${stepIndex + 1} dari ${tutorialSteps.length}`;
+            document.getElementById('tutorialTitle').innerText = step.title;
+            document.getElementById('tutorialText').innerText = step.text;
+
+            document.getElementById('btnPrevTutorial').disabled = stepIndex === 0;
+            document.getElementById('btnNextTutorial').innerText = stepIndex === tutorialSteps.length - 1 ? "Selesai & Main" : "Lanjut >";
+
+            setTimeout(() => positionTutorialCloud(targetElem, cloud), 300);
+        }
+
+        function positionTutorialCloud(targetElem, cloud) {
+            const rect = targetElem.getBoundingClientRect();
+            const cloudHeight = cloud.offsetHeight;
+            const cloudWidth = cloud.offsetWidth;
+
+            let top = rect.bottom + window.scrollY + 10;
+            let left = rect.left + window.scrollX + (rect.width / 2) - (cloudWidth / 2);
+
+            if (top + cloudHeight > window.innerHeight + window.scrollY) {
+                top = rect.top + window.scrollY - cloudHeight - 10;
+            }
+            if (left < 16) left = 16;
+            if (left + cloudWidth > window.innerWidth - 16) left = window.innerWidth - cloudWidth - 16;
+
+            cloud.style.top = `${top}px`;
+            cloud.style.left = `${left}px`;
+        }
+
+        function nextTutorialStep() {
+            if (currentTutorialStep < tutorialSteps.length - 1) {
+                showTutorialStep(currentTutorialStep + 1);
+            } else {
+                stopInteractiveTutorial();
+            }
+        }
+
+        function prevTutorialStep() {
+            if (currentTutorialStep > 0) {
+                showTutorialStep(currentTutorialStep - 1);
+            }
+        }
+
+        function stopInteractiveTutorial() {
+            clearTutorialHighlights();
+            document.getElementById('tutorialOverlay').classList.add('hidden');
+            document.getElementById('tutorialCloudBubble').classList.add('hidden');
+        }
+
+        function clearTutorialHighlights() {
+            document.querySelectorAll('.tutorial-highlight').forEach(el => {
+                el.classList.remove('tutorial-highlight');
+            });
+        }
+
+        function toggleLoreModal() {
+            document.getElementById('loreModal').classList.toggle('hidden');
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = "fixed bottom-5 right-5 left-5 sm:left-auto sm:max-w-xs bg-moi-gold text-slate-950 font-bold text-xs px-4 py-3 rounded-xl shadow-2xl z-50 border border-yellow-300 animate-bounce flex items-center justify-center gap-2";
+            toast.innerHTML = `<i class="fa-solid fa-circle-info text-sm"></i> ${message}`;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 3000);
+        }
+
+        window.addEventListener('resize', () => {
+            if (!document.getElementById('tutorialCloudBubble').classList.contains('hidden')) {
+                const step = tutorialSteps[currentTutorialStep];
+                const targetElem = document.getElementById(step.elementId);
+                if (targetElem) positionTutorialCloud(targetElem, document.getElementById('tutorialCloudBubble'));
+            }
+        });
+    </script>
+</body>
+</html>
